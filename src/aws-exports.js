@@ -3,23 +3,28 @@
 
 const awsmobile = {
     "aws_project_region": "us-east-1",
-    "aws_cognito_identity_pool_id": "us-east-1:bca1302d-24d8-441e-940b-779eb7a5f60f",
+    "aws_cognito_identity_pool_id": "us-east-1:5bf61375-b30c-4009-81b8-fbecaf0e2e7a",
     "aws_cognito_region": "us-east-1",
-    "aws_user_pools_id": "us-east-1_KsHLvCUDY",
-    "aws_user_pools_web_client_id": "33nr3b9o47olebh6thkfrvd05g",
+    "aws_user_pools_id": "us-east-1_3c1PhIImV",
+    "aws_user_pools_web_client_id": "6bbd1ssbq470pf8rp3rvtl1fa3",
     "oauth": {},
-    "aws_cognito_username_attributes": [],
-    "aws_cognito_social_providers": [],
-    "aws_cognito_signup_attributes": [
+    "aws_cognito_username_attributes": [
         "EMAIL"
     ],
+    "aws_cognito_social_providers": [],
+    "aws_cognito_signup_attributes": [],
     "aws_cognito_mfa_configuration": "OFF",
     "aws_cognito_mfa_types": [
         "SMS"
     ],
     "aws_cognito_password_protection_settings": {
         "passwordPolicyMinLength": 8,
-        "passwordPolicyCharacters": []
+        "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+        ]
     },
     "aws_cognito_verification_mechanisms": [
         "EMAIL"
