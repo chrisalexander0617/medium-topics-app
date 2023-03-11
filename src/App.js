@@ -1,10 +1,22 @@
 import logo from './logo.svg';
+import {useEffect} from 'react'
 import './App.css';
+import { MediumAPI, mMdiumAPI } from './api/services/medium/Medium';
 
 import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
+
+// it works but its expensive use data instead
 function App({signOut, user}) {
+  useEffect(()=> {
+    console.log('mounted')
+    const result1 = MediumAPI.getTopFeeds()
+    const result2 = MediumAPI.getLatestPosts()
+
+    console.log(result2)
+  },[])
+
   return (
     <div class="App">
       <Heading level={1}>Hello {user.username}</Heading>
